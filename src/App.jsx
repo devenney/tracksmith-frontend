@@ -6,7 +6,7 @@ import {
   BoltIcon,
   ArrowTrendingUpIcon,
 } from "@heroicons/react/24/solid";
-import BrandIcon from "/logo.png"; // or /favicon.svg if you convert
+import BrandIcon from "/logo.png";
 
 import Toggle from "./components/Toggle";
 
@@ -81,21 +81,26 @@ export default function App() {
               Run Type
             </label>
             <div className="grid grid-cols-3 gap-2">
-              {runTypes.map(({ key, label, Icon }) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setRouteType(key)}
-                  className={`${buttonBase} ${
-                    routeType === key
-                      ? "bg-accent text-white border-accent"
-                      : "text-gray-700 border-gray-300 hover:bg-gray-100"
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {label}
-                </button>
-              ))}
+              {runTypes.map(
+                (
+                  // eslint-disable-next-line no-unused-vars
+                  { key, label, Icon }
+                ) => (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => setRouteType(key)}
+                    className={`${buttonBase} ${
+                      routeType === key
+                        ? "bg-accent text-white border-accent"
+                        : "text-gray-700 border-gray-300 hover:bg-gray-100"
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {label}
+                  </button>
+                )
+              )}
             </div>
           </div>
 
