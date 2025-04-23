@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: oklch(65% 0.22 15); /* Deep Pink */
+  --color-accent-dark: oklch(55% 0.22 15); /* Darker pink on hover */
+}
