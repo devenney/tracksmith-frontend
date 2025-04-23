@@ -1,12 +1,67 @@
-# React + Vite
+# Tracksmith Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite + Tailwind app for planning personalized running routes.
 
-Currently, two official plugins are available:
+## 🧑‍💻 Contributing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Requirements
 
-## Expanding the ESLint configuration
+- Node.js (v20+ recommended)
+- npm (or `pnpm`, `yarn` — your choice, we use `npm`)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/devenney/tracksmith-frontend.git
+cd tracksmith-frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Code Style
+
+- Uses **ESLint** with React + Hooks rules
+- Auto-formatting via **Prettier**
+- Custom Tailwind theme via `@theme` in `index.css`
+
+Run:
+
+```bash
+npm run lint
+```
+
+### Folder Structure
+
+```
+src/
+├── components/    # Reusable components (e.g., Toggle.jsx)
+├── assets/        # Images, icons
+├── App.jsx        # App entrypoint
+├── index.css      # Tailwind + theme config
+└── main.jsx       # DOM entry
+```
+
+### Submitting Changes
+
+1. Create a new branch:
+   `git checkout -b feature/your-feature-name`
+
+2. Make your changes and commit:
+   `git commit -m "feat: your message"`
+
+3. Push and open a PR:
+   `git push origin feature/your-feature-name`
