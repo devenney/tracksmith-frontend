@@ -33,9 +33,25 @@ export default function App() {
     setConfig((prev) => ({ ...prev, [key]: value }));
   };
 
+  const pingBackend = async () => {
+    try {
+      const res = await fetch("http://localhost:8080/ping");
+      if (!res.ok) {
+        throw new Error(`Backend error: ${res.status}`);
+      }
+
+      const text = await res.text();
+      console.log("Backend says:", text);
+    } catch (error) {
+      console.error("Failed to ping backend:", error.message);
+      // TODO: Surface the error with a toast.
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitting config:", { distance, routeType, isLoop });
+    pingBackend();
   };
 
   return (
